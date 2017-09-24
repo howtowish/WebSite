@@ -9,9 +9,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import Home.models.DatabaseManagement;
-@WebServlet(urlPatterns="/login1")
+@WebServlet(urlPatterns="/login")
 public class Authentication extends HttpServlet {
 	public Authentication() {
 		super();
@@ -26,11 +27,14 @@ public class Authentication extends HttpServlet {
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
 		String username=req.getParameter("username");
 		String password=req.getParameter("password");
 		PrintWriter printWriter=resp.getWriter();
 		DatabaseManagement dm=new DatabaseManagement();
 		if(dm.checkUser(username, password)) {
+			HttpSession session=req.getSession();
+			session.setAttribute("username",username);
 			req.getRequestDispatcher("src/home.jsp").forward(req, resp);
 		}
 		else {
