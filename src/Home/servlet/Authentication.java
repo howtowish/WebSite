@@ -27,7 +27,7 @@ public class Authentication extends HttpServlet {
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		resp.setContentType("text/html;charset=UTF-8");
 		String username=req.getParameter("username");
 		String password=req.getParameter("password");
 		PrintWriter printWriter=resp.getWriter();
@@ -35,7 +35,8 @@ public class Authentication extends HttpServlet {
 		if(dm.checkUser(username, password)) {
 			HttpSession session=req.getSession();
 			session.setAttribute("username",username);
-			req.getRequestDispatcher("src/home.jsp").forward(req, resp);
+			req.getRequestDispatcher("JSP/giangvien.jsp").forward(req, resp);
+			
 		}
 		else {
 			printWriter.println("sadasd");
