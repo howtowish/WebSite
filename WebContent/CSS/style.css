@@ -1,6 +1,6 @@
 body{
-   margin-left: 100px;
-    margin-right: 100px;
+  	 margin-left: 100px;
+     margin-right: 100px;
      background-color:#ecf0f1;
 }
 #logo{
@@ -15,7 +15,7 @@ body{
 #font1{
    
     font-size: 20px;
-    color: #ecf0f1 ;
+    color: #ecffa fa-phone-square0f1 ;
     top: 2px;
     font-family: sans-serif;
     float: left;

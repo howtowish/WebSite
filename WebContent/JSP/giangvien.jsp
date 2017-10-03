@@ -6,8 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../CSS/style.css">
 
+<link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/style.css" />
 </head>
 <body>
 <body>
@@ -21,7 +21,7 @@
 <table style="width=100%">
     <tr>
         <td id="column1">
-            <div><img src="../image/hinh.jpg" alt=""></div>
+            <div><img src="${pageContext.request.contextPath}/image/hinh.jpg" alt=""></div>
         </td>
         <td id="column2">
             <div><h1>HỆ THỐNG QUẢN LÝ <br>VIỆN NGHIÊN CỨU KHOA HỌC </h1></div>
