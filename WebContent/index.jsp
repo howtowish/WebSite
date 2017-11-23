@@ -44,7 +44,7 @@
 				Already registered? <a href="#">Sign In</a>
 			</p>
 		</form>
-		<form class="login-form" action="register" method="post">
+		<form class="login-form" action="login" method="post">
 			  <table cellpadding="0" cellspacing="0" class="loginmodule_table_Bottom_dl" width="100%">
                             <tr class="loginmodule_header_dl">
                                 <td style="height: 20px">
