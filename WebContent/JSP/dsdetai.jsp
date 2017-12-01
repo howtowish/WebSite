@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Danh sách đề tài</title>
 
 <link rel="stylesheet" href="../CSS/style.css" />
    
@@ -125,7 +125,13 @@
 
     </div>
     <br><br><br><ul class="pager">
-    <li ><a href="../JSP/giangvien.jsp">Trở về</a></li>
+    <li ><button type="button" onclick="quay_lai_trang_truoc()">Trở về</button>
+
+  <script>
+      function quay_lai_trang_truoc(){
+          history.back();
+      }
+  </script></li>
     
   </ul>
 
